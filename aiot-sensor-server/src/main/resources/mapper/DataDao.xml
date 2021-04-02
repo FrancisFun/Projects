@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aiot.sensor.statistics.dao.DataDao">
+
+    <resultMap type="com.aiot.sensor.statistics.entity.Data" id="DataMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="device" column="device" jdbcType="INTEGER"/>
+        <result property="information" column="information" jdbcType="INTEGER"/>
+        <result property="timestamp" column="timestamp" jdbcType="TIMESTAMP"/>
+        <result property="value" column="value" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="DataMap">
+        select
+          id, device, information, timestamp, value
+        from aiot.data
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="DataMap">
+        select
+          id, device, information, timestamp, value
+        from aiot.data
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="DataMap">
+        select
+        id, device, information, timestamp, value
+        from aiot.data
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="device != null">
+                and device = #{device}
+            </if>
+            <if test="information != null">
+                and information = #{information}
+            </if>
+            <if test="timestamp != null">
+                and timestamp = #{timestamp}
+            </if>
+            <if test="value != null">
+                and value = #{value}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into aiot.data(device, information, timestamp, value)
+        values (#{device}, #{information}, #{timestamp}, #{value})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into aiot.data(device, information, timestamp, value)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.device}, #{entity.information}, #{entity.timestamp}, #{entity.value})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into aiot.data(device, information, timestamp, value)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.device}, #{entity.information}, #{entity.timestamp}, #{entity.value})
+        </foreach>
+        on duplicate key update
+        device = values(device) , information = values(information) , timestamp = values(timestamp) , value =
+        values(value)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update aiot.data
+        <set>
+            <if test="device != null">
+                device = #{device},
+            </if>
+            <if test="information != null">
+                information = #{information},
+            </if>
+            <if test="timestamp != null">
+                timestamp = #{timestamp},
+            </if>
+            <if test="value != null">
+                value = #{value},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from aiot.data where id = #{id}
+    </delete>
+
+</mapper>
+

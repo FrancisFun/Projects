@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">嗖嗖车主</string>
+
+    <string name="slogan">搜搜出行 安全放心</string>
+
+    <string name="title_activity_main">Soso Taxi</string>
+    <string name="title_activity_login">Soso Taxi</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_first_page">首页</string>
+    <string name="btn_login_skip">跳过</string>
+    <string name="title_enter_phone">输入手机号</string>
+    <string name="hint_enter_phone">该手机号仅用于联系您</string>
+    <string name="placeholder_enter_phone">请输入手机号</string>
+    <string name="btn_continue">继续</string>
+    <string name="placeholder_area_code">+86 ▼</string>
+    <string name="placeholder_search_area_code">点击此处搜索</string>
+    <string name="title_select_area_code">选择区号</string>
+
+    <!-- 登陆界面 -->
+    <string name="btn_confirm">确认</string>
+    <string name="feedback_create_password">密码长度为8-16位\n至少包含字母、数字、标点符号其中两种</string>
+    <string name="placeholder_enter_password">请输入密码</string>
+    <string name="placeholder_enter_password_again">请再次输入密码</string>
+    <string name="hint_create_password">您可以通过手机号及该密码登陆搜搜网约车</string>
+    <string name="title_create_password">创建密码</string>
+    <string name="hint_enter_password">使用密码登陆搜搜网约车</string>
+    <string name="title_enter_password">输入密码</string>
+    <string name="feedback_enter_password">密码为8至16位字符</string>
+    <string name="hint_enter_verification_code">验证码已发送至</string>
+    <string name="title_enter_verification_code">输入验证码</string>
+    <string name="feedback_enter_verification_code">6位数字验证码</string>
+    <string name="btn_verification_code_resend">重新发送</string>
+    <string name="regex_password">^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)]|[\\(\\)])+$)([^(0-9a-zA-Z)]|[\\(\\)]|[a-z]|[A-Z]|[0-9]){8,16}$</string>
+    <string name="error_password_different">两次输入不一致</string>
+    <string name="error_password_not_match">密码不符合要求</string>
+    <string name="error_password_incorrect">密码错误</string>
+    <string name="error_verification_code">验证码错误</string>
+    <string name="error_register_failed">注册失败</string>
+    <string name="hint_verification_code_sent">验证码已发送</string>
+
+    <!-- 订单界面 -->
+    <string name="btn_driver_order_successful">确认成功</string>
+    <string name="btn_driver_order_arrive_starting_point">到达上车地点</string>
+    <string name="btn_driver_order_pick_up_passenger">接到乘客</string>
+    <string name="hint_driver_order_number">尾号</string>
+    <string name="btn_driver_order_navigation">导航</string>
+    <string name="hint_driver_order_time_requirement">内到达乘客上车点</string>
+    <string name="hint_driver_order_please">请在</string>
+    <string name="title_driver_order_to">去</string>
+    <string name="hint_driver_order_wait_passenger">已到达约定乘车点，请等待乘客上车</string>
+    <string name="btn_driver_order_arrive_destination">到达目的地</string>
+    <string name="btn_driver_order_confirm_bill">发起收款</string>
+    <string name="btn_receive_order">开始订单</string>
+    <string name="title_order_finish">订单结束</string>
+    <string name="title_driver_order_processing">订单进行中</string>
+    <string name="btn_successful">确认成功</string>
+    <string name="btn_arrive_starting_point">到达上车地点</string>
+    <string name="end_work_text">收车</string>
+    <string name="error_phone_content_empty">手机号或短信内容不能为空</string>
+    <string name="hint_send_successful">发送成功</string>
+    <string name="error_phone_empty">手机号不能为空</string>
+    <string name="hint_route_planning">正在规划路径</string>
+    <string name="hint_permission_send_message_restrict">请授予此权限用于与乘客短信联系</string>
+    <string name="hint_permission_call_restrict">请授予此权限用于与乘客电话联系</string>
+    <string name="btn_finish_order">完成订单</string>
+    <string name="hint_navigation_finish">导航结束</string>
+    <string name="hint_permission_navigation_restrict">请授予此权限用于导航</string>
+
+    <string name="menu_order_label">我的订单</string>
+    <string name="menu_wallet_label">我的钱包</string>
+
+    <string name="check_time_by_order">按时间查看订单</string>
+    <string name="check_right_now">查看当前状况</string>
+    <string name="wallet_payment_setting">"支付设置     "</string>
+    <string name="payment_setting_label">支付方式</string>
+    <string name="payment_btn_label">充值</string>
+    <string name="assert_textView_label">余额（元）</string>
+    <string name="charge_money_label">我的充值</string>
+    <string name="coupon_label">优惠券</string>
+    <string name="edit_personal_data_label">"编辑资料      "</string>
+    <string name="edit_done_label">"完成       "</string>
+    <string name="industry_choice_label">行业</string>
+    <string name="app_id">5f1251ac</string>
+    <string name="title_driver_order_detail">订单详情</string>
+    <string name="btn_start_order">开始订单</string>
+    <string name="btn_reserve_order">抢单</string>
+    <string name="btn_reserve_order_successful">抢单成功</string>
+    <string name="btn_reserve_order_failed">单已被抢</string>
+    <string name="btn_deny_order">拒绝</string>
+    <string name="title_toolbar_reserve_order">预约订单</string>
+    <string name="sms_template_part_one">您好，我已接单，预计在</string>
+    <string name="sms_template_part_two">内到达上车点，请做好上车准备。</string>
+    <string name="sms_pick_up_passenger">您好，我已到达上车点，请您尽快上车。</string>
+    <string name="unit_hour">时</string>
+    <string name="unit_minute">分</string>
+    <string name="unit_second">秒</string>
+    <string name="hint_estimate_distance">预计行程</string>
+    <string name="hint_kilometer_estimate">公里  预计</string>
+    <string name="hint_receive">已为您接到从</string>
+    <string name="hint_to">到</string>
+    <string name="hint_order">的订单，</string>
+    <string name="hint_deny_order">拒绝接单!</string>
+    <string name="hint_receive_order">接单成功!</string>
+    <string name="hint_confirm_successful">确认成功!</string>
+    <string name="hint_order_has_started">订单已开始，请前往上车点</string>
+    <string name="hint_finish_order_and_confirm_bill">已到达目的地，请提醒乘客带好随身物品。请确认账单金额并发起收款。</string>
+    <string name="hint_pick_up_passenger">已到达上车点，请等待乘客上车。若乘客长时间未上车，请及时联系乘客。</string>
+    <string name="hint_reserve_successful">抢单成功!</string>
+    <string name="hint_deny_reserve_order">拒绝接单!</string>
+    <string name="hint_permission_track">请授予此权限用于定位服务</string>
+
+
+</resources>

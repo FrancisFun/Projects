@@ -1,0 +1,28 @@
+server:
+  port: 6061
+
+spring:
+  jackson:
+    time-zone: Asia/Shanghai
+  datasource:
+    url: jdbc:mysql://<HOST AND PORT>/aiot
+    username: <USERNAME>
+    password: <PASSWORD>
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: <HOST>
+    port: <PORT>
+    virtual-host: <VIRTUAL HOST>
+    username: <USERNAME>
+    password: <PASSWORD>
+    queue: <QUEUE>
+    listener:
+      simple:
+        concurrency: 2
+        max-concurrency: 2
+
+mybatis:
+  mapper-locations: classpath:/mapper/*Dao.xml
+  type-aliases-package: com.aiot.web.*.entity
+
+

@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="CAC.client.ContactPage.ContactPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CAC.client.ContactPage"
+    xmlns:cc="using:CAC.client.CustomControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <cc:ResizableMasterDetail MasterDefaultWidth="260" MasterMaxWidth="350" MasterThresholdWidth="200" MasterMinWidth="200">
+            <cc:ResizableMasterDetail.MasterContent>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+
+                        <AutoSuggestBox x:Name="searchUserBox" VerticalAlignment="Center" 
+                                        Margin="10 0 5 0"
+                                        TextChanged="searchUserBox_TextChanged"
+                                        SuggestionChosen="searchUserBox_SuggestionChosen"
+                                        BorderBrush="{ThemeResource SystemControlPageBackgroundBaseLowBrush}">
+                            
+                        </AutoSuggestBox>
+                            
+
+                        <Button Style="{StaticResource transparentButtonStyle}" Grid.Column="1">
+                            <Button.Flyout>
+                                <Flyout>
+                                    <cc:SearchUserControl/>
+                                </Flyout>
+                            </Button.Flyout>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE710;" FontSize="16"/>
+                        </Button>
+                    </Grid>
+                    
+                    <local:ContactList x:Name="contactList" Grid.Row="2"/>
+                </Grid>
+
+            </cc:ResizableMasterDetail.MasterContent>
+
+            <cc:ResizableMasterDetail.DetailContent>
+                <local:ContactDetailControl x:Name="contactDetail" DidDeleteContact="contactDetail_DidDeleteContact"/>
+            </cc:ResizableMasterDetail.DetailContent>
+        </cc:ResizableMasterDetail>
+    </Grid>
+</Page>

@@ -1,0 +1,205 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionMenuTextColor">@color/colorAreaCode</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Login">
+
+    </style>
+
+    <style name="Login.Title">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/colorLoginTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Login.Hint">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorLoginHint</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Login.Feedback">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorLoginHint</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Login.Resend">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Login.AreaCode">
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:textColor">@color/colorAreaCode</item>
+        <item name="android:background">@color/colorAreaCodeGrey</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Login.VerificationCode">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/colorLoginTitle</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <style name="Login.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Login.DisableButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorLoginTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder">
+
+    </style>
+
+    <style name="DriverOrder.ReserveOrderDate">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder.ReserveOrderTime">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="DriverOrder.Title">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder.Destination">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder.Hint">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorDriverOrderHint</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DriverOrder.TimeRequirement">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DriverOrder.Time">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DriverOrder.Number">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/colorDriverOrderNumber</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder.NumberHint">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorDriverOrderAddress</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DriverOrder.Address">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorDriverOrderAddress</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="DriverOrder.CardTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder.CardDestination">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder.BillAmount">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="DriverOrder.BillUnit">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="DriverOrder.BillHint">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorDriverOrderHint</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="DriverOrder.BillItemTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="DriverOrder.BillItemHint">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorDriverOrderHint</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="DriverOrder.ToolbarTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="DriverOrder.FromTo">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorDriverOrderTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DriverOrder.DisableButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorLoginTitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

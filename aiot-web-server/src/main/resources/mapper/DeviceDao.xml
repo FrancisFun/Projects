@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aiot.web.equipment.dao.DeviceDao">
+
+    <resultMap type="com.aiot.web.equipment.entity.Device" id="DeviceMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="area" column="area" jdbcType="INTEGER"/>
+        <result property="deviceId" column="device_id" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="parent" column="parent" jdbcType="INTEGER"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="firmwareVersion" column="firmware_version" jdbcType="VARCHAR"/>
+        <result property="hardwareVersion" column="hardware_version" jdbcType="VARCHAR"/>
+        <result property="softwareVersion" column="software_version" jdbcType="VARCHAR"/>
+        <result property="mac" column="mac" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="DeviceMap">
+        select
+          id, area, device_id, status, parent, type, firmware_version, hardware_version, software_version, mac
+        from aiot.device
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="DeviceMap">
+        select
+          id, area, device_id, status, parent, type, firmware_version, hardware_version, software_version, mac
+        from aiot.device
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="DeviceMap">
+        select
+        id, area, device_id, status, parent, type, firmware_version, hardware_version, software_version, mac
+        from aiot.device
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="area != null">
+                and area = #{area}
+            </if>
+            <if test="deviceId != null and deviceId != ''">
+                and device_id = #{deviceId}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="parent != null">
+                and parent = #{parent}
+            </if>
+            <if test="type != null">
+                and type = #{type}
+            </if>
+            <if test="firmwareVersion != null and firmwareVersion != ''">
+                and firmware_version = #{firmwareVersion}
+            </if>
+            <if test="hardwareVersion != null and hardwareVersion != ''">
+                and hardware_version = #{hardwareVersion}
+            </if>
+            <if test="softwareVersion != null and softwareVersion != ''">
+                and software_version = #{softwareVersion}
+            </if>
+            <if test="mac != null and mac != ''">
+                and mac = #{mac}
+            </if>
+        </where>
+    </select>
+    <select id="queryAllByParent" resultMap="DeviceMap">
+        select
+          id, area, device_id, status, parent, type, firmware_version, hardware_version, software_version, mac
+        from aiot.device
+        where parent = #{parent}
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into aiot.device(area, device_id, status, parent, type, firmware_version, hardware_version, software_version, mac)
+        values (#{area}, #{deviceId}, #{status}, #{parent}, #{type}, #{firmwareVersion}, #{hardwareVersion}, #{softwareVersion}, #{mac})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into aiot.device(area, device_id, status, parent, type, firmware_version, hardware_version,
+        software_version, mac)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.area}, #{entity.deviceId}, #{entity.status}, #{entity.parent}, #{entity.type},
+            #{entity.firmwareVersion}, #{entity.hardwareVersion}, #{entity.softwareVersion}, #{entity.mac})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into aiot.device(area, device_id, status, parent, type, firmware_version, hardware_version,
+        software_version, mac)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.area}, #{entity.deviceId}, #{entity.status}, #{entity.parent}, #{entity.type},
+            #{entity.firmwareVersion}, #{entity.hardwareVersion}, #{entity.softwareVersion}, #{entity.mac})
+        </foreach>
+        on duplicate key update
+        area = values(area) , device_id = values(device_id) , status = values(status) , parent = values(parent) , type =
+        values(type) , firmware_version = values(firmware_version) , hardware_version = values(hardware_version) ,
+        software_version = values(software_version) , mac = values(mac)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update aiot.device
+        <set>
+            <if test="area != null">
+                area = #{area},
+            </if>
+            <if test="deviceId != null and deviceId != ''">
+                device_id = #{deviceId},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="parent != null">
+                parent = #{parent},
+            </if>
+            <if test="type != null">
+                type = #{type},
+            </if>
+            <if test="firmwareVersion != null and firmwareVersion != ''">
+                firmware_version = #{firmwareVersion},
+            </if>
+            <if test="hardwareVersion != null and hardwareVersion != ''">
+                hardware_version = #{hardwareVersion},
+            </if>
+            <if test="softwareVersion != null and softwareVersion != ''">
+                software_version = #{softwareVersion},
+            </if>
+            <if test="mac != null and mac != ''">
+                mac = #{mac},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from aiot.device where id = #{id}
+    </delete>
+
+</mapper>
+

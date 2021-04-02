@@ -1,0 +1,68 @@
+﻿<UserControl
+    x:Class="CAC.client.MessagePage.CodeMessageBubble"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CAC.client.MessagePage"
+    xmlns:richText="using:RichTextControls"
+    xmlns:con="using:CAC.client.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <con:StringToHightlightLanguage x:Key="StringToHightlightLanguage"/>
+        <con:NullToVisibility x:Key="NullToVisibility"/>
+        
+    </UserControl.Resources>
+
+    <Grid Background="{x:Bind BgColor, Mode=OneWay}" CornerRadius="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" MinHeight="60"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <ScrollViewer x:Name="richTextHost" MaxHeight="400" MaxWidth="1000" MinWidth="200" Grid.Column="1">
+            <richText:CodeHighlightedTextBlock  VerticalAlignment="Stretch" Margin="0"
+                                        Code="{x:Bind Code, Mode=OneWay}" MaxWidth="1000"
+                                        HighlightLanguage="{x:Bind CodeLanguage,Mode=OneWay, Converter={StaticResource StringToHightlightLanguage}}"/>
+        </ScrollViewer>
+
+        <StackPanel x:Name="functionBtnsLeft" Grid.RowSpan="2" Grid.Column="0" Visibility="Collapsed">
+            <Button x:Name="BtnRun" Height="25" Width="25" Style="{StaticResource transparentButtonStyle}" HorizontalAlignment="Center"
+                    Padding="0" Click="BtnRun_Click">
+                <FontIcon FontFamily="{StaticResource CAC-2}" Glyph="A" FontSize="14"/>
+            </Button>
+
+            <Button x:Name="BtnEdit" Height="25" Width="25" Style="{StaticResource transparentButtonStyle}" HorizontalAlignment="Center"
+                    Padding="0" Click="BtnEdit_Click">
+                <FontIcon FontFamily="{StaticResource CAC-2}" Glyph="B" FontSize="14"/>
+            </Button>
+
+        </StackPanel>
+        
+        <StackPanel x:Name="functionBtnRight" Grid.RowSpan="2" Grid.Column="2" Visibility="Visible">
+            <Button x:Name="BtnRun1" Height="25" Width="25" Style="{StaticResource transparentButtonStyle}" HorizontalAlignment="Center"
+                    Padding="0" Click="BtnRun_Click">
+                <FontIcon FontFamily="{StaticResource CAC-2}" Glyph="A" FontSize="14"/>
+            </Button>
+
+            <Button x:Name="BtnEdit1" Height="25" Width="25" Style="{StaticResource transparentButtonStyle}" HorizontalAlignment="Center"
+                    Padding="0" Click="BtnEdit_Click">
+                <FontIcon FontFamily="{StaticResource CAC-2}" Glyph="B" FontSize="14"/>
+            </Button>
+            
+        </StackPanel>
+
+        <Grid Grid.Row="1" Grid.Column="1" Visibility="{x:Bind RunResult,Mode=OneWay, Converter={StaticResource NullToVisibility}}">
+            <TextBlock Text="{x:Bind RunResult, Mode=OneWay}" IsTextSelectionEnabled="True"/>
+        </Grid>
+    </Grid>
+    
+</UserControl>

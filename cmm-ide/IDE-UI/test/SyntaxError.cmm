@@ -1,0 +1,10 @@
+int a = 4, sum = 0;
+while(a <> 0 {
+    sum = sum + a;
+}
+
+/* 
+* Expected Output:
+* Line Col Message
+* 2    13  字符缺少匹配'{期望匹配的字符':')'
+*/
