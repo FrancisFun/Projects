@@ -1,5 +1,5 @@
 <!--
- * @FileDescription: 设备看板组件
+ * @FileDescription: 鉴权页面
  * @Author: 范承祥
  * @Date: 2021/2/25
  * @LastEditors: 范承祥

@@ -1,5 +1,5 @@
 <!--
- * @FileDescription: 设备看板组件
+ * @FileDescription: 鉴权面板组件
  * @Author: 范承祥
  * @Date: 2021/2/26
  * @LastEditors: 范承祥
