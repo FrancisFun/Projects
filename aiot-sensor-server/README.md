@@ -17,25 +17,25 @@
       │  └─com
       │      └─aiot
       │          └─sensor
-      │              ├─equipment		// 设备
-      │              │  ├─dao			// 数据库访问类
-      │              │  ├─entity		// 实体类
-      │              │  └─service		// service接口
-      │              │      └─impl		// service实现类
-      │              ├─home				// 概览
-      │              │  ├─dao			// 数据库访问类
-      │              │  ├─entity		// 实体类
-      │              │  └─service		// service接口
-      │              │      └─impl		// service实现类
-      │              ├─message			// 消息
-      |              │  ├─entity		// 消息实体类
-      │              ├─statistics		// 数据
-      │              │  ├─dao			// 数据库访问类
-      │              │  ├─entity		// 实体类
-      │              │  └─service		// service接口
-      │              │      └─impl		// service实现类
-      │              └─util				// 工具类
+      │              ├─equipment        // 设备
+      │              │  ├─dao           // 数据库访问类
+      │              │  ├─entity        // 实体类
+      │              │  └─service       // service接口
+      │              │      └─impl      // service实现类
+      │              ├─home             // 概览
+      │              │  ├─dao           // 数据库访问类
+      │              │  ├─entity        // 实体类
+      │              │  └─service       // service接口
+      │              │      └─impl      // service实现类
+      │              ├─message          // 消息
+      |              │  ├─entity        // 消息实体类
+      │              ├─statistics       // 数据
+      │              │  ├─dao           // 数据库访问类
+      │              │  ├─entity        // 实体类
+      │              │  └─service       // service接口
+      │              │      └─impl      // service实现类
+      │              └─util             // 工具类
       └─resources
-          └─mapper						// mapper文件
+          └─mapper                      // mapper文件
 ```
 

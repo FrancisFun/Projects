@@ -17,24 +17,24 @@ IDE-UI是CMM IDE的界面部分。
 具体项目结构如下所示。
 
 ```c#
-├─CMMInterpreter		// CMM解释器项目
-│  ├─antlr				// ANTLR自动生成部分(*)
-│  ├─CMMException		// 错误异常
-│  ├─debuger			// 调试器(*)
-│  ├─g4					// G4语法部分(*)
-│  ├─inter				// 中间代码翻译部分
-│  ├─util				// 哈希链表
-│  └─vm					// 虚拟机
-│      ├─exception		// 虚拟机异常
-├─IDE-UI				// IDE界面项目
-│  ├─Asset				//资源文件
-│  ├─Controls			// 控制类
-│  ├─Converter			// 转换器
-│  ├─DrawTreeGraph		// 语法树绘制
-│  ├─Helper				// 帮助类
-│  ├─Properties			// 属性文件
-│  ├─Style				// 风格文件
-│  └─test				// 测试代码文件
+├─CMMInterpreter        // CMM解释器项目
+│  ├─antlr              // ANTLR自动生成部分(*)
+│  ├─CMMException       // 错误异常
+│  ├─debuger            // 调试器(*)
+│  ├─g4                 // G4语法部分(*)
+│  ├─inter              // 中间代码翻译部分
+│  ├─util               // 哈希链表
+│  └─vm                 // 虚拟机
+│      ├─exception      // 虚拟机异常
+├─IDE-UI                // IDE界面项目
+│  ├─Asset              //资源文件
+│  ├─Controls           // 控制类
+│  ├─Converter          // 转换器
+│  ├─DrawTreeGraph      // 语法树绘制
+│  ├─Helper             // 帮助类
+│  ├─Properties         // 属性文件
+│  ├─Style              // 风格文件
+│  └─test               // 测试代码文件
 ```
 
 备注：`(*)`为本人负责部分，由于本项目主要作为实习参考使用，故下列只展示本人负责部分的所用技术、攻克难点、改进方向及参考材料。
