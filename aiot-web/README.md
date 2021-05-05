@@ -15,20 +15,20 @@
 
 ```javascript
 ├─src
-│  ├─assets			// 静态资源
-│  │  └─css			// css资源
-│  ├─components		// 组件
-│  │  ├─boards		// 面板组件
-│  │  ├─charts		// 图表组件
-│  │  ├─global		// 全局组件
-│  │  ├─menus		// 菜单组件
-│  │  └─tables		// 表格组件
-│  ├─plugins		// 插件
-│  ├─router			// 路由配置
-│  ├─store			// VueX配置
-│  ├─util			// 工具
-│  └─views			// 页面
-└─theme				// ElementUI主题资源
-    └─fonts			// 字体资源
+│  ├─assets         // 静态资源
+│  │  └─css         // css资源
+│  ├─components     // 组件
+│  │  ├─boards      // 面板组件
+│  │  ├─charts      // 图表组件
+│  │  ├─global      // 全局组件
+│  │  ├─menus       // 菜单组件
+│  │  └─tables      // 表格组件
+│  ├─plugins        // 插件
+│  ├─router         // 路由配置
+│  ├─store          // VueX配置
+│  ├─util           // 工具
+│  └─views          // 页面
+└─theme             // ElementUI主题资源
+    └─fonts         // 字体资源
 ```
 

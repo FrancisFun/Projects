@@ -13,44 +13,44 @@
 
 ```java
 ├─app
-│  ├─libs										// 第三方库
+│  ├─libs                                       // 第三方库
 │  └─src
 │      ├─main
-│      │  ├─assets								// 资源
+│      │  ├─assets                              // 资源
 │      │  ├─java
 │      │  │  └─com
 │      │  │      └─sosotaxi
 │      │  │          └─driver
-│      │  │              ├─adapter				// 适配器类
-│      │  │              ├─application			// 应用类(*)
-│      │  │              ├─common				// 通用类
-│      │  │              ├─model				// 模型类
-│      │  │              │  └─message			// 消息类
-│      │  │              ├─service				// 服务类(*)
-│      │  │              │  └─net				// 网络服务类(*)
-│      │  │              ├─ui					// 界面
-│      │  │              │  ├─driverOrder		// 司机订单(*)
-│      │  │              │  ├─home				// 主页
-│      │  │              │  ├─login				// 登陆(*)
-│      │  │              │  ├─main				// 主页面
-│      │  │              │  ├─navigation		// 导航
-│      │  │              │  ├─overlay			// 轨迹绘制(*)
-│      │  │              │  ├─todayRoute		// 今日行程
-│      │  │              │  ├─userInformation	// 用户信息
-│      │  │              │  │  ├─order			// 订单
-│      │  │              │  │  ├─personData		// 个人信息
-│      │  │              │  │  └─wallet			// 钱包
-│      │  │              │  └─widget			// 组件(*)
-│      │  │              ├─utils				// 工具类(*)
-│      │  │              └─viewModel			// ViewModel类(*)
+│      │  │              ├─adapter              // 适配器类
+│      │  │              ├─application          // 应用类(*)
+│      │  │              ├─common               // 通用类
+│      │  │              ├─model                // 模型类
+│      │  │              │  └─message           // 消息类
+│      │  │              ├─service              // 服务类(*)
+│      │  │              │  └─net               // 网络服务类(*)
+│      │  │              ├─ui                   // 界面
+│      │  │              │  ├─driverOrder       // 司机订单(*)
+│      │  │              │  ├─home              // 主页
+│      │  │              │  ├─login             // 登陆(*)
+│      │  │              │  ├─main              // 主页面
+│      │  │              │  ├─navigation        // 导航
+│      │  │              │  ├─overlay           // 轨迹绘制(*)
+│      │  │              │  ├─todayRoute        // 今日行程
+│      │  │              │  ├─userInformation   // 用户信息
+│      │  │              │  │  ├─order          // 订单
+│      │  │              │  │  ├─personData     // 个人信息
+│      │  │              │  │  └─wallet         // 钱包
+│      │  │              │  └─widget            // 组件(*)
+│      │  │              ├─utils                // 工具类(*)
+│      │  │              └─viewModel            // ViewModel类(*)
 │      │  └─res
-│      │      ├─animator						// 动画
-│      │      ├─drawable						// 图标
-│      │      ├─layout							// 布局
-│      │      ├─menu							// 菜单
-│      │      ├─navigation						// 导航栏
-│      │      ├─values							// 值配置
-├─NaviTts										// 导航包
-└─onsdk_all										// 导航包
+│      │      ├─animator                        // 动画
+│      │      ├─drawable                        // 图标
+│      │      ├─layout                          // 布局
+│      │      ├─menu                            // 菜单
+│      │      ├─navigation                      // 导航栏
+│      │      ├─values                          // 值配置
+├─NaviTts                                       // 导航包
+└─onsdk_all                                     // 导航包
 ```
 
